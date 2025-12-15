@@ -1,1 +1,31 @@
-Nothing needs to be added to .gitignore since only a README.md file was modified and no build artifacts, dependencies, or temporary files were present in the changes.
+```
+# Dependencies
+vendor/
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# PHP specific
+*.php~
+php_errors.log
+
+# Build/dist directories
+dist/
+build/
+```
