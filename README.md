@@ -155,8 +155,10 @@ Platforma jest przygotowana do hostingu na **Zenbox** przez eksport statyczny:
    ```
 
 2. **Prześlij pliki:**
-   - Prześlij zawartość folderu `out` do `public_html` na Zenbox (FTP/File Manager)
-   - Prześlij plik `.htaccess` do głównego katalogu
+   - Prześlij **całą zawartość** folderu `out` bezpośrednio do `public_html` na Zenbox (FTP/File Manager)
+   - Struktura: `public_html/index.html`, `public_html/_next/`, `public_html/regulamin/`, itd.
+   - Prześlij plik `.htaccess` do `public_html/`
+   - Prześlij plik `install.php` do `public_html/` (do instalacji bazy danych)
 
 3. **Skonfiguruj bazę danych MySQL** w panelu Zenbox i uruchom `lib/schema.sql`
 

@@ -53,11 +53,13 @@ mysql -h localhost -u krzyszton_port1 -p krzyszton_port1 < lib/schema.sql
 ### 4. Prześlij pliki na serwer
 
 1. **Zaloguj się do panelu Zenbox** (FTP lub File Manager)
-2. **Przejdź do katalogu `public_html`** (lub odpowiedniego dla Twojej domeny)
+2. **Przejdź do katalogu `public_html`** (to jest katalog root Twojej domeny)
 3. **Prześlij zawartość folderu `out`**:
-   - Wszystkie pliki z folderu `out/` do `public_html/`
-   - Upewnij się, że `index.html` jest w głównym katalogu
-4. **Prześlij plik `.htaccess`** do głównego katalogu (`public_html/`)
+   - Wszystkie pliki i foldery z folderu `out/` bezpośrednio do `public_html/`
+   - Upewnij się, że `index.html` jest w katalogu `public_html/`
+   - Struktura powinna być: `public_html/index.html`, `public_html/_next/`, itd.
+4. **Prześlij plik `.htaccess`** do katalogu `public_html/` (główny katalog)
+5. **Prześlij plik `install.php`** do katalogu `public_html/` (do instalacji bazy danych)
 
 ### 5. Sprawdź czy działa
 

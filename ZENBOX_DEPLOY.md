@@ -40,9 +40,12 @@ To utworzy folder `out` ze statycznymi plikami HTML, CSS i JS gotowymi do przes�
 ### Krok 3: Prześlij pliki na Zenbox
 
 1. Zaloguj się do panelu Zenbox (FTP lub File Manager)
-2. Przejdź do katalogu `public_html` (lub odpowiedniego dla Twojej domeny)
-3. Prześlij **całą zawartość** folderu `out` do `public_html`
-4. Upewnij się, że plik `index.html` jest w głównym katalogu
+2. Przejdź do katalogu `public_html` (to jest katalog root Twojej domeny)
+3. Prześlij **całą zawartość** folderu `out` bezpośrednio do `public_html`:
+   - Wszystkie pliki i foldery z `out/` → `public_html/`
+   - Struktura: `public_html/index.html`, `public_html/_next/`, `public_html/regulamin/`, itd.
+4. Prześlij plik `.htaccess` do `public_html/`
+5. Prześlij plik `install.php` do `public_html/` (do instalacji bazy danych)
 
 ### Krok 4: Konfiguracja bazy danych MySQL
 
