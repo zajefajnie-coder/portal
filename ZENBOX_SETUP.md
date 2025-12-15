@@ -40,13 +40,13 @@ build-zenbox.bat
 2. Otwórz phpMyAdmin
 3. Wybierz bazę danych `krzyszton_port1`
 4. Przejdź do zakładki "SQL"
-5. Skopiuj zawartość pliku `lib/schema.sql`
+5. Skopiuj zawartość pliku `lib/schema-zenbox.sql`
 6. Wklej i wykonaj
 
 **Opcja B: Przez MySQL CLI (jeśli masz dostęp SSH)**
 
 ```bash
-mysql -h localhost -u krzyszton_port1 -p krzyszton_port1 < lib/schema.sql
+mysql -h localhost -u krzyszton_port1 -p krzyszton_port1 < lib/schema-zenbox.sql
 # Wpisz hasło: Alicja2025##
 ```
 
