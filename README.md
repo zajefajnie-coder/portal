@@ -1,85 +1,93 @@
-# Portal
+# StageOne - Modeling Portal
 
-Welcome to the Portal project! This is a web application designed to provide a centralized platform for accessing various resources and services.
+Welcome to StageOne, a premium modeling portfolio platform connecting talent with opportunities. This platform combines artistic portfolio showcase capabilities with social networking and business features for the modeling industry.
 
 ## Table of Contents
 - [Features](#features)
+- [Technologies](#technologies)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+- [Database Schema](#database-schema)
+- [API Endpoints](#api-endpoints)
 
 ## Features
-- Feature 1: Description of key functionality
-- Feature 2: Description of another feature
-- Feature 3: Additional capabilities
+
+### Portfolio Management
+- **Sessions**: Create themed photo sessions with titles, descriptions, locations, and dates
+- **Image Galleries**: Upload and organize up to 50 photos per session with drag-and-drop ordering
+- **Categories**: Organize content with multiple categories per session
+- **Cover Images**: Set featured images for each session
+
+### Social Features
+- **Following System**: Follow other models, photographers, and industry professionals
+- **Likes**: Public "heart" likes to show appreciation for work
+- **Comments**: Moderate comments on sessions
+- **Notifications**: Real-time notifications for interactions
+
+### Business Tools
+- **Casting Calls**: Create and apply for casting opportunities
+- **Reference System**: Request and give professional references
+- **Private Ratings**: Rate sessions privately (1-5 stars) for personal organization
+- **Professional Networking**: Connect with photographers, stylists, and makeup artists
+
+### User Profiles
+- **Tabbed Interface**: Organize content with Sessions, Photos, About, Contact, and Stats tabs
+- **Bio & Specialization**: Showcase professional details
+- **Equipment & Links**: Share gear and social media profiles
+- **Statistics**: View follower counts, session numbers, and engagement metrics
+
+## Technologies
+
+- **Backend**: PHP 8.4 with strict typing, prepared statements, and object-oriented design
+- **Database**: MySQL 8 with proper indexing and UTF8MB4 character set
+- **Frontend**: HTML5, CSS3, JavaScript ES6+, Bootstrap 5.3
+- **Security**: CSRF protection, password hashing, input validation, reCAPTCHA integration
+- **File Handling**: Secure image upload with validation and proper storage organization
 
 ## Installation
-To get started with this project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portal.git
-   cd portal
+   git clone https://github.com/yourusername/stageone.git
+   cd stageone
    ```
 
-2. Install dependencies:
+2. Set up your web server to point to the project root
+
+3. Create the database using the schema file:
    ```bash
-   npm install
-   # or
-   yarn install
+   mysql -u username -p < schema.sql
    ```
 
-3. Set up environment variables:
+4. Configure your database connection in `/includes/config.php`:
+   ```php
+   define('DB_HOST', 'your_host');
+   define('DB_NAME', 'your_database');
+   define('DB_USER', 'your_username');
+   define('DB_PASS', 'your_password');
+   ```
+
+5. Set proper file permissions for upload directories:
    ```bash
-   cp .env.example .env
-   # Edit .env file with your configuration
+   chmod 755 uploads/
+   chmod 755 avatars/
+   chmod 755 sessions/
    ```
 
-## Usage
-To run the development server:
+## Database Schema
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The application uses a comprehensive database schema defined in `schema.sql` with tables for:
+- Users and profiles
+- Sessions and session images
+- Social features (likes, follows, comments)
+- Business features (casting calls, applications)
+- Messaging and notifications
+- References and ratings
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+## API Endpoints
 
-## Project Structure
-```
-portal/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── utils/
-├── package.json
-└── README.md
-```
-
-## Technologies Used
-- React.js
-- Node.js
-- Express.js
-- MongoDB (or your preferred database)
-- CSS/Sass
-- Other technologies specific to your project
-
-## Contributing
-We welcome contributions to the Portal project! To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-Please make sure to update tests as appropriate and follow our code of conduct.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+The application provides RESTful API endpoints in the `/api/` directory for:
+- Authentication (login, register, logout)
+- Social features (follow, like, comment)
+- Content management (sessions, images)
+- Messaging and notifications
+- Business features (casting, references)
