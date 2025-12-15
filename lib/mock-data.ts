@@ -1,4 +1,16 @@
-import { Look } from './db';
+// Types for mock data
+export interface Look {
+  id: string;
+  title: string;
+  date: string;
+  location?: string;
+  image_url: string;
+  image_alt: string;
+  author_id: string;
+  author_name: string;
+  tags: string[];
+  collaborators?: string[];
+}
 
 export const mockLooks: Look[] = [
   {

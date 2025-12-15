@@ -7,10 +7,8 @@ Platforma społecznościowa dla branży fotomodelingu w Polsce. Portal umożliwi
 - **Next.js 14** (App Router, Server Components)
 - **TypeScript**
 - **Tailwind CSS** + **shadcn/ui**
-- **MySQL** (baza danych)
-- **mysql2** (klient MySQL)
-- **NextAuth.js** (autentykacja)
-- **Zenbox/Vercel** (deployment-ready)
+- **MySQL** (baza danych - Zenbox)
+- **Zenbox** (deployment-ready - eksport statyczny)
 
 ## 📋 Wymagania
 
@@ -162,25 +160,7 @@ Platforma jest przygotowana do hostingu na **Zenbox** przez eksport statyczny:
 
 3. **Skonfiguruj bazę danych MySQL** w panelu Zenbox i uruchom `lib/schema.sql`
 
-📖 **Szczegółowa instrukcja:** [ZENBOX_DEPLOY.md](./ZENBOX_DEPLOY.md)
-
-### Opcja 2: Vercel (Pełna funkcjonalność Next.js)
-
-Platforma jest gotowa do wdrożenia na Vercel:
-
-1. **Przygotuj bazę danych MySQL w chmurze:**
-   - [PlanetScale](https://planetscale.com) (rekomendowane, darmowy plan)
-   - [Railway](https://railway.app)
-   - Lub inny dostawca MySQL
-
-2. **Połącz repozytorium z Vercel:**
-   - Przejdź na [vercel.com](https://vercel.com)
-   - Kliknij "Add New Project"
-   - Połącz swoje repozytorium Git
-
-3. **Skonfiguruj zmienne środowiskowe w Vercel**
-
-📖 **Szczegółowa instrukcja:** [VERCEL_DEPLOY.md](./VERCEL_DEPLOY.md) | [QUICK_DEPLOY.md](./QUICK_DEPLOY.md)
+📖 **Szczegółowa instrukcja:** [ZENBOX_DEPLOY.md](./ZENBOX_DEPLOY.md) | [ZENBOX_SETUP.md](./ZENBOX_SETUP.md)
 
 ## 📄 Licencja
 

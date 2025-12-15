@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Look } from "@/lib/db";
+import { Look } from "@/lib/mock-data";
 import Link from "next/link";
 
 interface LookCardProps {
