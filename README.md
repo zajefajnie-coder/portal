@@ -140,11 +140,33 @@ Platforma jest zaprojektowana zgodnie z wymogami RODO:
 
 3. Przejrzeć i dostosować treści prawne do specyfiki działalności
 
-## 🚀 Deployment na Vercel
+## 🚀 Deployment
 
-Szczegółowa instrukcja znajduje się w pliku [VERCEL_DEPLOY.md](./VERCEL_DEPLOY.md).
+### Opcja 1: Zenbox (Hosting PHP/MySQL) ⭐
 
-### Szybki start:
+Platforma jest przygotowana do hostingu na **Zenbox** przez eksport statyczny:
+
+1. **Zbuduj aplikację:**
+   ```bash
+   # Windows
+   build-zenbox.bat
+   
+   # Linux/Mac
+   chmod +x build-zenbox.sh
+   ./build-zenbox.sh
+   ```
+
+2. **Prześlij pliki:**
+   - Prześlij zawartość folderu `out` do `public_html` na Zenbox (FTP/File Manager)
+   - Prześlij plik `.htaccess` do głównego katalogu
+
+3. **Skonfiguruj bazę danych MySQL** w panelu Zenbox i uruchom `lib/schema.sql`
+
+📖 **Szczegółowa instrukcja:** [ZENBOX_DEPLOY.md](./ZENBOX_DEPLOY.md)
+
+### Opcja 2: Vercel (Pełna funkcjonalność Next.js)
+
+Platforma jest gotowa do wdrożenia na Vercel:
 
 1. **Przygotuj bazę danych MySQL w chmurze:**
    - [PlanetScale](https://planetscale.com) (rekomendowane, darmowy plan)
@@ -156,25 +178,9 @@ Szczegółowa instrukcja znajduje się w pliku [VERCEL_DEPLOY.md](./VERCEL_DEPLO
    - Kliknij "Add New Project"
    - Połącz swoje repozytorium Git
 
-3. **Skonfiguruj zmienne środowiskowe w Vercel:**
-   ```
-   DB_HOST=twoj-host
-   DB_PORT=3306
-   DB_USER=twoj-user
-   DB_PASSWORD=twoje-haslo
-   DB_NAME=portal_modelingowy
-   NEXTAUTH_URL=https://twoja-domena.vercel.app
-   NEXTAUTH_SECRET=wygeneruj-secret-key
-   ```
+3. **Skonfiguruj zmienne środowiskowe w Vercel**
 
-4. **Uruchom migracje bazy danych** (patrz VERCEL_DEPLOY.md)
-
-5. **Deploy!** Vercel automatycznie zbuduje i wdroży aplikację.
-
-### Health Check
-
-Po deployment sprawdź czy aplikacja działa:
-- `https://twoja-domena.vercel.app/api/health` - sprawdza połączenie z bazą danych
+📖 **Szczegółowa instrukcja:** [VERCEL_DEPLOY.md](./VERCEL_DEPLOY.md) | [QUICK_DEPLOY.md](./QUICK_DEPLOY.md)
 
 ## 📄 Licencja
 
