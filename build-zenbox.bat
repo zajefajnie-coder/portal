@@ -27,6 +27,9 @@ echo    4. Prześlij plik .htaccess do public_html
 echo    5. Prześlij plik install.php do public_html
 echo    6. Otwórz install.php w przeglądarce i wykonaj instalację bazy danych
 echo.
-echo 📖 Więcej informacji w pliku ZENBOX_DEPLOY.md
+echo 📖 Więcej informacji:
+echo    - DEPLOY_INSTRUKCJA.md - szybka instrukcja wdrożenia
+echo    - ZENBOX_SETUP.md - szczegółowa konfiguracja
+echo    - ZENBOX_DEPLOY.md - pełna dokumentacja
 pause
 
