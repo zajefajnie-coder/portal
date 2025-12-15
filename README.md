@@ -10,7 +10,7 @@ Platforma społecznościowa dla branży fotomodelingu w Polsce. Portal umożliwi
 - **MySQL** (baza danych)
 - **mysql2** (klient MySQL)
 - **NextAuth.js** (autentykacja)
-- **Vercel** (deployment-ready)
+- **Zenbox/Vercel** (deployment-ready)
 
 ## 📋 Wymagania
 

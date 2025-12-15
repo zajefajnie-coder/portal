@@ -1,0 +1,63 @@
+# Konfiguracja dla Zenbox - Next.js Static Export
+
+# Włącz mod_rewrite
+RewriteEngine On
+RewriteBase /
+
+# Przekieruj wszystkie żądania do index.html (dla client-side routing)
+# To pozwala na działanie Next.js routing w eksporcie statycznym
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteRule ^(.*)$ /index.html [L]
+
+# Kompresja plików (zmniejsza rozmiar transferu)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Cache dla statycznych zasobów
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Obrazy
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  
+  # CSS i JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # Fonty
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# Bezpieczeństwo - ukryj pliki konfiguracyjne
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Chroń pliki .env
+<FilesMatch "\.env">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# UTF-8 encoding
+AddDefaultCharset UTF-8
+
