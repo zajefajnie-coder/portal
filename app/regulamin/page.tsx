@@ -12,7 +12,7 @@ export default function RegulaminPage() {
         <h2 className="mb-4 text-2xl font-semibold">1. Postanowienia ogólne</h2>
         <p className="mb-4 text-gray-700">
           Niniejszy Regulamin określa zasady korzystania z platformy internetowej{" "}
-          <strong>portal-modelingowy.pl</strong> (zwanej dalej „Platformą"), będącej
+          <strong>portal-modelingowy.pl</strong> (zwanej dalej &ldquo;Platformą&rdquo;), będącej
           serwisem społecznościowym dedykowanym osobom związanym z branżą fotomodelingu
           w Polsce.
         </p>
@@ -37,7 +37,7 @@ export default function RegulaminPage() {
         </p>
         <ul className="mb-4 ml-6 list-disc text-gray-700">
           <li>Tworzenie i zarządzanie profilami użytkowników</li>
-          <li>Publikowanie portfolio w formie „Looks" (sesji fotograficznych)</li>
+          <li>Publikowanie portfolio w formie &ldquo;Looks&rdquo; (sesji fotograficznych)</li>
           <li>Przeglądanie portfolio innych użytkowników</li>
           <li>Nawiązywanie kontaktów z innymi członkami społeczności</li>
           <li>Oznaczanie współpracowników w publikowanych sesjach</li>

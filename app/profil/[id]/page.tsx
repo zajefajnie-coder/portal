@@ -24,6 +24,12 @@ const mockUsers: Record<string, { name: string; bio?: string; location?: string;
   },
 };
 
+export async function generateStaticParams() {
+  return Object.keys(mockUsers).map((id) => ({
+    id,
+  }));
+}
+
 export default function ProfilPage({ params }: { params: { id: string } }) {
   const user = mockUsers[params.id];
 

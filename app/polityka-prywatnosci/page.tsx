@@ -13,7 +13,7 @@ export default function PolitykaPrywatnosciPage() {
         <p className="mb-4 text-gray-700">
           Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych
           osobowych użytkowników platformy{" "}
-          <strong>portal-modelingowy.pl</strong> (zwanej dalej „Platformą") zgodnie
+          <strong>portal-modelingowy.pl</strong> (zwanej dalej &ldquo;Platformą&rdquo;) zgodnie
           z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia
           2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych
           osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy
@@ -167,7 +167,7 @@ export default function PolitykaPrywatnosciPage() {
           </li>
           <li>
             <strong>Usunięcia danych</strong> — żądania usunięcia danych w przypadkach
-            określonych w art. 17 RODO („prawo do bycia zapomnianym")
+            określonych w art. 17 RODO (&ldquo;prawo do bycia zapomnianym&rdquo;)
           </li>
           <li>
             <strong>Ograniczenia przetwarzania</strong> — w przypadkach określonych w art. 18
