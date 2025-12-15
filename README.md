@@ -4,7 +4,7 @@ Platforma społecznościowa dla branży fotomodelingu w Polsce. Portal umożliwi
 
 ## 🚀 Technologie
 
-- **Next.js 14** (App Router, Server Components)
+- **Next.js 14** (App Router, Static Export)
 - **TypeScript**
 - **Tailwind CSS** + **shadcn/ui**
 - **MySQL** (baza danych - Zenbox)
@@ -14,7 +14,7 @@ Platforma społecznościowa dla branży fotomodelingu w Polsce. Portal umożliwi
 
 - Node.js 18+ 
 - npm lub yarn
-- MySQL 8.0+ (lokalnie lub zdalnie)
+- MySQL/MariaDB (na Zenbox)
 
 ## 🛠️ Instalacja
 
@@ -100,16 +100,14 @@ Otwórz [http://localhost:3000](http://localhost:3000) w przeglądarce.
 - Dostępność (WCAG 2.1 AA)
 - Mock dane dla 3 przykładowych sesji
 
-### 🚧 Do zaimplementowania
+### 🚧 Do zaimplementowania (opcjonalnie)
 
-- Integracja z NextAuth (logowanie/rejestracja)
-- Połączenie z bazą danych MySQL (zamiast mock data)
-- Przesyłanie i przechowywanie zdjęć (Cloudinary/AWS S3)
+- Integracja z systemem autentykacji
+- Połączenie z bazą danych MySQL (obecnie używa mock data)
+- Przesyłanie i przechowywanie zdjęć
 - System tagowania i wyszukiwania
 - Profil użytkownika z edycją
 - Publikowanie nowych sesji
-- System powiadomień
-- Panel administracyjny
 
 ## 🔒 Zgodność z RODO
 
