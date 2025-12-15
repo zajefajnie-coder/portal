@@ -1,0 +1,25 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "A centralized platform for accessing various resources and services",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "keywords": ["portal", "webapp", "react"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^13.4.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.4.0",
+    "vitest": "^0.32.2"
+  }
+}

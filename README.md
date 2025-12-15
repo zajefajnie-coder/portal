@@ -12,9 +12,11 @@ Welcome to the Portal project! This is a web application designed to provide a c
 - [License](#license)
 
 ## Features
-- Feature 1: Description of key functionality
-- Feature 2: Description of another feature
-- Feature 3: Additional capabilities
+- Responsive design with mobile-friendly navigation
+- Modular component architecture
+- Custom hooks for reusable logic
+- Accessible UI elements
+- Modern React patterns
 
 ## Installation
 To get started with this project, follow these steps:
@@ -47,28 +49,38 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+Open [http://localhost:5173](http://localhost:5173) in your browser to see the application.
 
 ## Project Structure
 ```
 portal/
 ├── public/
+│   └── index.html
 ├── src/
 │   ├── components/
+│   │   ├── Header.jsx
+│   │   └── FeatureCard.jsx
 │   ├── pages/
+│   │   └── HomePage.jsx
 │   ├── styles/
-│   └── utils/
+│   │   └── App.css
+│   ├── utils/
+│   │   ├── api.js
+│   │   └── useToggle.js
+│   ├── App.jsx
+│   └── main.jsx
 ├── package.json
+├── .env.example
 └── README.md
 ```
 
 ## Technologies Used
 - React.js
-- Node.js
-- Express.js
-- MongoDB (or your preferred database)
-- CSS/Sass
-- Other technologies specific to your project
+- Vite
+- JavaScript (ES6+)
+- CSS
+- Custom Hooks
+- Responsive Design
 
 ## Contributing
 We welcome contributions to the Portal project! To contribute:
