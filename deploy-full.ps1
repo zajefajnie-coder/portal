@@ -202,3 +202,4 @@ Write-Host "`n=== Wdrożenie zakończone! ===" -ForegroundColor Green
 Write-Host "Aplikacja dostępna pod adresem: http://$Server" -ForegroundColor Cyan
 
 Remove-SSHSession -SessionId $session.SessionId | Out-Null
+

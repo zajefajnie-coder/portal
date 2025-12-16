@@ -125,3 +125,4 @@ Write-Host "5. Ustawienie uprawnień: sudo chown -R www-data:www-data /var/www/p
 Write-Host "`nAplikacja tymczasowo dostępna w: $AppDir" -ForegroundColor Cyan
 
 Remove-SSHSession -SessionId $session.SessionId | Out-Null
+

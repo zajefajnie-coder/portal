@@ -248,3 +248,4 @@ php artisan view:cache
 - Uruchom `npm run build`
 - Sprawdź uprawnienia do `public/build`
 - Sprawdź konfigurację Nginx
+

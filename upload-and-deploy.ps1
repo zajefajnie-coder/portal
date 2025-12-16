@@ -87,3 +87,4 @@ Write-Host "3. Konfiguracji Nginx" -ForegroundColor White
 Write-Host "4. Przeniesienia do /var/www" -ForegroundColor White
 
 Remove-SSHSession -SessionId $session.SessionId | Out-Null
+

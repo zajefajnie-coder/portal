@@ -252,3 +252,4 @@ cd /var/www/portal-modelingowy
 npm run build
 sudo chown -R www-data:www-data public/build
 ```
+

@@ -98,3 +98,4 @@ ENDSSH
 echo ""
 echo "=== Wdrożenie zakończone! ==="
 echo "Aplikacja dostępna pod adresem: http://83.230.44.103"
+

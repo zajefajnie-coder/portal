@@ -182,3 +182,4 @@ php artisan view:cache
 ## Wsparcie
 
 Szczegółowe instrukcje znajdują się w pliku `DEPLOYMENT.md`
+

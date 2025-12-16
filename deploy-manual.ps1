@@ -58,3 +58,4 @@ Write-Host "   php artisan config:cache" -ForegroundColor White
 Write-Host "   php artisan route:cache" -ForegroundColor White
 Write-Host "   php artisan view:cache" -ForegroundColor White
 Write-Host ""
+

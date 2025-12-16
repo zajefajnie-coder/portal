@@ -94,3 +94,4 @@ try {
     Write-Host "BŁĄD: $_" -ForegroundColor Red
     Write-Host "`nSpróbuj ręcznego wdrożenia zgodnie z DEPLOY-NOW.md" -ForegroundColor Yellow
 }
+
